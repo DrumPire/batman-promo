@@ -1,3 +1,6 @@
+@import url("../font/Roboto-Regular.ttf");
+@import url("../font/Roboto-Bold.ttf");
+@import url("../font/MuseoSansCyrl-700.ttf");
 *,
 *::before,
 *::after {
@@ -12,10 +15,12 @@
 html,
 body {
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
-  background-image: url("../img/background.jpg");
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -28,16 +33,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 113.5rem;
-  width: 100%;
+  width: 113.5rem;
   margin: 0 auto;
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-top: 6.4rem;
+  position: absolute;
+  padding-bottom: 9.4rem;
+  top: 6.4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .header__logo {
@@ -73,6 +79,84 @@ body {
 
 .header__social-icon:not(:last-child) {
   margin-right: 2rem;
+}
+
+.main {
+  color: #fff;
+  padding-top: 18.7rem;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.main__rating-title {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.main__rating-wrap img {
+  width: 1.2rem;
+  height: 1.2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
+}
+
+.main__rating-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.main__rating-wrap img:not(:last-child) {
+  margin-right: 0.4rem;
+}
+
+.main__rating-numbers {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-left: 0.9rem;
+}
+
+.main__title {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.main__header {
+  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-size: 7.6rem;
+  line-height: 120%;
+}
+
+.main__description {
+  max-width: 52.8rem;
+  font-size: 1.4rem;
+  line-height: 150%;
+  margin-bottom: 4.1rem;
+}
+
+.main__button {
+  display: inline-block;
+  padding: 2.2rem 7.2rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  background: #151515;
+  border-radius: 0.8rem;
+  margin-bottom: 8.8rem;
+}
+
+.main .container {
+  display: block;
 }
 
 .footer {
