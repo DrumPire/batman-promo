@@ -22,6 +22,11 @@ h1, h2, h3, h4, h5, h6, p {
   padding: 0;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -29,6 +34,95 @@ h1, h2, h3, h4, h5, h6, p {
   width: 113.5rem;
   margin: 0 auto;
 }
+
+/*сетка*/
+@media (max-width: 108em) {
+  html {
+      font-size: 9px;
+  }
+}
+
+@media (max-width: 105em) {
+  html {
+      font-size: 8.75px;
+  }
+}
+
+@media (max-width: 91.5em) {
+  html {
+      font-size: 7.9px;
+  }
+}
+
+@media (max-width: 91em) {
+  html {
+      font-size: 8.4px;
+  }
+}
+
+@media (max-width: 90em) {
+  html {
+      font-size: 7.9px;
+  }
+}
+
+@media (max-width: 80em) {
+  html {
+      font-size: 7.2px
+  }
+}
+
+@media (max-width: 72em) {
+  html {
+      font-size: 6.5px;
+  }
+}
+
+@media (max-width: 64em) {
+  html {
+      font-size: 5.5px;
+  }
+}
+
+
+
+@media (max-width: 44em) {
+  html {
+      font-size: 9px;
+  }
+}
+
+@media (max-width: 38em) {
+  html {
+      font-size: 8px;
+  }
+}
+
+@media (max-width: 34em) {
+  html {
+      font-size: 7px;
+  }
+}
+
+@media (max-width: 30em) {
+  html {
+      font-size: 6px;
+  }
+}
+
+@media (max-width: 26em) {
+  html {
+      font-size: 4.5px;
+  }
+}
+
+@media (max-width: 21em) {
+  html {
+      font-size: 4.4px;
+  }
+}
+
+/*сетка*/
 
 .header {
   position: absolute;
@@ -45,6 +139,12 @@ h1, h2, h3, h4, h5, h6, p {
     display: flex;
     align-items: center;
   }
+  &__menu-close {
+    display: none;
+  }
+  &__nav-mobile {
+    display: none;
+  }
   &__nav a:not(:last-child) {
     margin-right: 2.4rem;
   }
@@ -54,13 +154,16 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 1.4rem;
     line-height: 1.6rem;
   }
-  &__social
+  &__social 
     &-icon {
       width: 1.7rem;
       height: 1.6rem;
     }
   &__social-icon:not(:last-child) {
     margin-right: 2rem;
+  }
+  &__socials {
+    display: flex;
   }
 }
 
@@ -71,7 +174,8 @@ h1, h2, h3, h4, h5, h6, p {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
+  background-position-x: center;
+  background-position-y: top;
   &__description-wrap {
     display: flex;
     align-items: center;
@@ -96,9 +200,10 @@ h1, h2, h3, h4, h5, h6, p {
     border-radius: 50%;
     background-color: #151515;
   }
-  // &__button-dark img {
-  //   text-align: center;
-  // }
+  &__button-dark img {
+    width: 3.5rem;
+    height: 4rem;
+  }
   &__rating-title {
     display: block;
     font-size: 1.4rem;
@@ -183,6 +288,9 @@ h1, h2, h3, h4, h5, h6, p {
     cursor: pointer;
   }
 }
+.menu-burger {
+  display: none;
+}
 .main .container {
   display: block;
 }
@@ -210,3 +318,124 @@ h1, h2, h3, h4, h5, h6, p {
   opacity: 0.4;
 }
 
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem 0;
+  z-index: 100;
+  &__inner {
+    width: 100rem;
+    height: 60rem;
+  }
+}
+.active {
+  display: flex;
+}
+
+@media (max-width: 48em) {
+  html {
+      font-size: 10px;
+  }
+  .container {
+    width: 100%;
+    padding: 0 3rem;
+  }
+  .header {
+    display: none;
+    width: 69.4%;
+    background-color: #151515;
+    top: 0;
+    transform: translate(-28%, 0);
+    padding: 4rem 0;
+    z-index: 10;
+    &__menu-close {
+      display: block;
+      position: absolute;
+      right: 4rem;
+      top: 4rem;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+    &__nav {
+      display: none;
+    }
+    &__nav-mobile {
+      display: flex;
+      flex-direction: column;
+    }
+    &__nav-mobile a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 114%;
+    }
+    &__nav-mobile a:not(:last-child) {
+      padding-bottom: 1.7rem;
+    }
+    &__logo {
+      margin-right: 0;
+      margin-bottom: 3.5rem;
+    }
+    &__socials {
+      margin-bottom: 2.3rem;
+    }
+  }
+
+  .header .container, .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-burger {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .main {
+    background-position: 66%;
+    &__description-wrap {
+      flex-direction: column;
+    }
+    &__description {
+      margin-bottom: 5rem;
+    }
+    &__button-play {
+      margin-left: 0;
+      margin-bottom: 5rem;
+    }
+    &__button {
+      margin-bottom: 4.4rem;
+    }
+    &-slider__arrow {
+      display: none;
+    }
+    &-slider__wrap {
+      max-width: 53.5%;
+    }
+  }
+
+  .footer .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal {
+    padding: 2rem;
+    &__inner {
+      width: 100%;
+      height: 40rem;
+    }
+  }
+}
