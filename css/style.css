@@ -84,10 +84,54 @@ h1, h2, h3, h4, h5, h6, p {
 .main {
   color: #fff;
   padding-top: 18.7rem;
+  padding-bottom: 10.4rem;
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+.main__description-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__button-play {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 13.2rem;
+  height: 13.2rem;
+  border-radius: 50%;
+  background-color: #391917;
+  cursor: pointer;
+  margin-left: 33.1rem;
+}
+
+.main__button-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #151515;
 }
 
 .main__rating-title {
@@ -153,6 +197,50 @@ h1, h2, h3, h4, h5, h6, p {
   background: #151515;
   border-radius: 0.8rem;
   margin-bottom: 8.8rem;
+}
+
+.main-slider__slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-slider__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 41.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-slider__slide {
+  position: relative;
+  width: 16.4rem;
+  height: 10.5rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.main-slider__slide span {
+  position: absolute;
+  left: 1.2rem;
+  bottom: 0.6rem;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
+.main-slider__arrow {
+  width: 3.2rem;
+  height: 2.2rem;
+  margin-left: 2.8rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
 }
 
 .main .container {
