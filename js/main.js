@@ -41,3 +41,5 @@ modalWindow.addEventListener('click', e => {
     modalWindow.classList.remove('active');
   }
 });
+
+// added play trailer
