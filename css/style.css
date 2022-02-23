@@ -316,6 +316,7 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  cursor: pointer;
 }
 
 .main-slider__wrap {
